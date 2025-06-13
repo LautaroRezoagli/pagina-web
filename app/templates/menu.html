@@ -6,11 +6,14 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+
     <h1>Menú de la Aplicación</h1>
-    <ul>
-        <li><a href="{{ url_for('registro.registro') }}">Registrar nuevo trabajador</a></li>
-        <li><a href="{{ url_for('asistencia.entrada') }}">Registrar entrada de trabajador</a></li>
-        <li><a href="{{ url_for('asistencia.salida') }}">Registrar salida de trabajador</a></li>
-    </ul>
+
+    <div class="navbar">
+        <a href="{{ url_for('registro.registro') }}">Registrar Trabajador</a>
+        <a href="{{ url_for('asistencia.entrada') }}">Registrar Entrada</a>
+        <a href="{{ url_for('asistencia.salida') }}">Registrar Salida</a>
+    </div>
+
 </body>
 </html>
