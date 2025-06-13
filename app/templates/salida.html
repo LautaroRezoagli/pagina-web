@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Salida</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Registro de Salida</h1>
+    <form method="POST">
+        <label>Número de Legajo:</label><br>
+        <input type="text" name="legajo" required><br><br>
+
+        <label>Últimos 4 dígitos del DNI:</label><br>
+        <input type="text" name="dni_ultimos" pattern="\d{4}" required><br><br>
+
+        <input type="submit" value="Registrar Salida">
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Menú de la Aplicación</h1>
+    <ul>
+        <li><a href="{{ url_for('registro.registro') }}">Registrar nuevo trabajador</a></li>
+        <li><a href="{{ url_for('asistencia.entrada') }}">Registrar entrada de trabajador</a></li>
+        <li><a href="{{ url_for('asistencia.salida') }}">Registrar salida de trabajador</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Entrada</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Registro de Entrada</h1>
+    <form method="POST">
+        <label>Número de Legajo:</label><br>
+        <input type="text" name="legajo" required><br><br>
+
+        <label>Últimos 4 dígitos del DNI:</label><br>
+        <input type="text" name="dni_ultimos" pattern="\d{4}" required><br><br>
+
+        <label>Dependencia:</label><br>
+        <select name="dependencia" required>
+            <option value="">--Seleccione dependencia--</option>
+            <option value="D01">Edificio Central (D01)</option>
+            <option value="D02">Talleres (D02)</option>
+            <option value="D03">Centro deportivo (D03)</option>
+        </select><br><br>
+
+        <input type="submit" value="Registrar Entrada">
+    </form>
+</body>
+</html>

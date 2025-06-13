@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Trabajador</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Formulario de Registro de Trabajador</h1>
+    <form method="POST">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Apellido:</label><br>
+        <input type="text" name="apellido" required><br><br>
+
+        <label>DNI:</label><br>
+        <input type="text" name="dni" required><br><br>
+
+        <label>Correo Electrónico:</label><br>
+        <input type="email" name="correo" required><br><br>
+
+        <label>Número de Legajo:</label><br>
+        <input type="text" name="legajo" required><br><br>
+
+        <label>Cantidad de horas semanales:</label><br>
+        <input type="number" name="horas" min="0" required><br><br>
+
+        <label>Función:</label><br>
+        <select name="funcion" required>
+            <option value="">--Seleccione función--</option>
+            <option value="DO">Docente (DO)</option>
+            <option value="AD">Administrativo (AD)</option>
+            <option value="TE">Técnico (TE)</option>
+        </select><br><br>
+
+        <label>Dependencia:</label><br>
+        <select name="dependencia" required>
+            <option value="">--Seleccione dependencia--</option>
+            <option value="D01">Edificio Central (D01)</option>
+            <option value="D02">Talleres (D02)</option>
+            <option value="D03">Centro deportivo (D03)</option>
+        </select><br><br>
+
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>
